@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "write";
+}
+
+
+@{
+    ViewData["Title"] = "write";
+}
+
+@model Venting
+
+<html5>
+    <head>
+        <title>What's up?</title>
+        <link rel="stylesheet" href="~/css/bootstrap.css">
+        <link rel="stylesheet" href="~/css/custom.css">
+        <link rel="stylesheet" href="~/fontes/material-icon/css/material-design-iconic-font.min.css">
+
+        <!-- Main css -->
+
+
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/bootstrap.js"></script>
+        <script src="~/js/jquery.validate.min.js"></script>
+
+        <link rel="stylesheet" href="~/csses/style.css">
+
+
+
+
+    </head>
+    <body>
+        <style>
+            #nabar {
+                float: right;
+            }
+
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                    /* Change color of dropdown links on hover */
+                    .dropdown-content a:hover {
+                        background-color: #ddd;
+                    }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
+            #size {
+                margin-top: 10px;
+                margin-left: 30%;
+                align-content: center;
+                height: 400px;
+                width: 700px;
+                text-wrap: inherit;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 200;
+            }
+        </style>
+        
+
+
+
+
+        @if (TempData["Success"] != null)
+        {
+            <p class="text-capitalize">@TempData["Success"]</p>
+        }
+
+
+                <div class="main">
+
+                    <div class="container">
+
+                        <form asp-action="write" style="background-color:whitesmoke">
+
+
+                            <div class="form-group form-input">
+                                <pre style="color:black"> What's it about?</pre>
+                                <label for="name" class="form-label"> </label>
+                                <input style="color:black" id="name" type="text" value="" name="title" required>
+
+                            </div>
+                            <div class="form-group form-input">
+                                <pre style="color:black">Say something...</pre>
+                                <label for="name" class="form-label"></label>
+                                <textarea id="name" asp-for="secret" style=" background-color:white;width:1000px; height:100px; color:black;" vocab="http://data-vocabulary.org"></textarea>
+                            </div>
+                            <div>
+                                <input value="LOCK" style="background-color:salmon; margin-top:10px;  width:150px;height:50px;align-content:center; justify-content:center; margin-left:43%;" type="submit" />
+                            </div>
+                            <a  class="vertify-booking" style="display:grid; justify-content:center;  font-size:20px; color:salmon; text-decoration:none;" asp-action="lists">To display your diary</a>
+
+                        </form>
+                      
+                    </div>
+                </div>
+
+                
+               </body>
+
+</html5>
+
+

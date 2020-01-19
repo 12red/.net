@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewData["Title"] = "login";
+}
+
+
+
+
+
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fontss/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fontss/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/vendors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/csss/util.css">
+    <link rel="stylesheet" type="text/css" href="~/csss/main.css">
+    <link rel="stylesheet" href="~/fontes/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/csses/style.css">
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+    @model Logins
+
+    @if (TempData["UserLoginFailed"] != null)
+    {
+        <p class="danger">@TempData["UserLoginFailed"]</p>
+    }
+    <div class="main">
+
+        <div class="container">
+            
+                
+                    <form asp-action="login" style="background-color:whitesmoke">
+
+                        <h2>Account login</h2>
+                        <div class="form-group form-input">
+                            <input style="color:black"  asp-for="username" type="text" id="name" name="username" value="" required />
+                            <label for="name" class="form-label">User name</label>
+
+                            <span Class="focus-input100" asp-validation-for="username" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group form-input">
+
+
+
+                            <input style="color:black"  id="name" asp-for="password" type="password" name="password" value="" required />
+                            <label for="name" class="form-label">Password</label>
+
+                            <span asp-validation-for="password" class="focus-input100"></span>
+
+                        </div>
+
+                        <div class="form-submit">
+                            <input style="background-color:salmon" type="submit" class="submit" id="submit" value="Login" />
+
+
+
+                            <a asp-action="register" asp-controller="Home">Dont have an account? Sign Up</a>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="~/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendors/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendors/bootstrap/js/popper.js"></script>
+    <script src="~/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendors/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendors/daterangepicker/moment.min.js"></script>
+    <script src="~/vendors/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendors/countdowntime/countdowntime.js"></script>
+    <script src="~/vendores/jquery/jquery.min.js"></script>
+    <script src="~/jses/main.js"></script>
+
+
+</body>
+    </html>
+
+
+
+
+

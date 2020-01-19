@@ -1,0 +1,49 @@
+﻿<html><head>
+    <title>
+
+
+    </title>
+    <link rel="stylesheet" href="~/fontes/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/csses/style.css">
+
+
+</head>
+
+      <body>
+         
+
+          <div>
+              @model Venting
+             
+            
+              <div class="main">
+
+                  <div class="container">
+                      <form asp-action="Delete">
+                          <dl class="dl-horizontal">
+                              <dt style="color:black">
+                                  @Html.DisplayNameFor(model => model.title)
+                              </dt>
+                              <dd style="color:black">
+                                  @Html.DisplayFor(model => model.title)
+                              </dd>
+                              <dt style="color:black">
+                                  @Html.DisplayNameFor(model => model.secret)
+                              </dt>
+                              <dd style="color:black">
+                                  @Html.DisplayFor(model => model.secret)
+                              </dd>
+                              </dl>
+                              <input type="hidden" asp-for="id" />
+                              <input style="background-color:salmon;" type="submit" value="Delete" class="btn btn-default" />
+
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+      </body>
+
+</html>
